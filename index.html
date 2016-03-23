@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/animate.css">
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/style.css">
+      <script src="build/js/vendor.min.js"></script>
+      <script src="bower_components/moment/min/moment.min.js"></script>
+      <script type="text/javascript" src="build/js/app.js"></script>
+    <title>Eddie Duro | Web Developer | Front End</title>
+  </head>
+  <body>
+    <button class="hamburger hamburger--squeeze" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <nav id="navigation" class="hidden">
+      <div class="menu menu-overlay">
+        <div>
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="fullpage">
+        <div class="section" data-anchor="#home">
+          <section id="home">
+            <div id="hero" class="flexBox">
+              <h1><span class="firstName ">Eddie</span><span class="lastName "> Duro</span></h1>
+              <h2 class="subString">Web Developer</h2>
+            </div>
+          </section>
+        </div>
+
+        <div class="section" data-anchor="#about">
+          <section id="about" class="blocks">
+            <div id="left-col">
+              <h1 class="intro">Hello,</h1>
+              <h3 class="aboutText">My name is Eddie Duro and I am a Junior Web Developer, Sound Designer, and creative based out of Portland, Oregon. I am currently a Junior Web Developer with a focus on Front-End, but I have experience working on the back-end as well.</h3>
+              <h3 class="aboutText">Current technologies and frameworks I know are HTML, CSS, JS, jQuery, Angular2, NodeJS, NPM, Gulp, SCSS, Bower, TypeScript, PHP, MySQL, Silex, Git, Bootstrap, Materialize.</h3>
+
+
+              <h4 class="verticalText" id="twitterHandle">@e_jamesduro</h4>
+              <h4 class="verticalText" id="emailText">e.jamesduro@gmail.com</h4>
+            </div>
+            <div id="right-col"></div>
+          </section>
+        </div>
+
+        <div class="container" data-anchor="#work">
+          <section id="work" class='inner_container'>
+            <div class="item width_33 teaser  branding automotive ">
+              <div class="ce_image block">
+                  <a href="#">
+                    <div class="image_container">
+                        <div class="image_overflow">
+                          <img src="images/crate.png">
+                        </div>
+                        <div class="image_container_wrapper">
+                          <div class="caption">Size matters. <br> <strong>ElringKlinger.</strong></div>
+                          <div class="button">Open project</div>
+                        </div>
+                    </div>
+                  </a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="section" data-anchor="#blog">
+          <section id="blog">
+            <div class="row">
+              <div class="col-md-4 card">
+                <div class="title titleBg">
+                  <h3>Hello, World! 03/08/16</h3>
+                </div>
+                <div class="body">
+                  <h4>Just writing my first blog post on my newly updated portfolio. Man what a journey it was getting to this point. This site still needs some work but I'm pretty happy with the results of work. Over the past 2 years I have learned so much not only about programming but about myself as well.</h4>
+                  <h4>I've realized how much programming actually relates to every aspect of life. My patience has definitely been tested and I'm sure it won't ever stop, frustration soon becomes your best friend whether you like it or not - but you can easliy use it to your advantage just take a few moments to yourself then come back and critically think about the problem from a different angle or approach.</h4>
+                </div>
+              </div>
+              <div class="col-md-4 card2">
+                <div class="title titleBg">
+                  <h3>Lengthy Posts? 03/14/16</h3>
+                </div>
+                <div class="body">
+                  <h4>I've decided to keep my posts to a length that fits in theses cards. I could go past the limit and write lengthy posts but honestly I am more interested in getting my point across in as little words as possible.</h4>
+                  <h4>In the future I will probably develop a blog more dedicated to tutorials with code examples but this is perfect for now. Maybe I will turn one of these into a live tweet feed. Hmm - that may be a good idea.</h4>
+                </div>
+              </div>
+              <div class="col-md-4 card3">
+                <div class="title titleBg">
+                  <h3>Creative outlet! 03/22/16</h3>
+                </div>
+                <div class="body">
+                  <h4>Going to add a slider to this section so whoever is reading this can scroll through and read my little entries, if they feel like it. </h4>
+                  <h4>I wonder how many people treat programming as a means to an end vs being an actual creative outlet. I definitely treat programming like I do all areas of my life. I dedicate everything I have to offer to it in hopes it returns the same.</h4>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="section" data-anchor="#contact">
+          <section id="contact">
+          <h1 class="text-center">Find out more!</h1>
+          <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <form action="https://formspree.io/e.jamesduro@gmail.com" method="POST" id="formSpree">
+                <input type="hidden" name="_next" value="thanks.html" />
+                <label for="name">
+                  <input type="text" name="name" placeholder="name">
+                  <span>Name</span>
+                </label>
+                <label for="email">
+                  <input type="email" name="_replyto" placeholder="example@email.com">
+                  <span>E-mail</span>
+                </label>
+                <span>
+                  <button class="btn btn-danger" type="submit" id="emailForm">Send</button>
+                  <span>
+                  </form>
+                </div>
+                <div class="col-md-6">
+                  <textarea name="comment" form="formSpree" id="formArea"></textarea>
+                </div>
+              </div>
+          </div>
+          </section>
+        </div>
+    <footer>
+      <div id="footer_nav">
+        <span><p class="footer-text text-right">Made with <i class="fa fa-heart" id="heart"></i> by Eddie Duro.</p></span>
+      </div>
+    </footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.js"></script>
+  </body>
+</html>

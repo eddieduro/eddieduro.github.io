@@ -1,0 +1,423 @@
+@import "../bower_components/css-hamburgers/_sass/hamburgers/hamburgers.scss";
+@import url(https://fonts.googleapis.com/css?family=Hind+Siliguri);
+@import url(https://fonts.googleapis.com/css?family=Khand:600);
+
+// Color variables
+$light_color: #a096f3;
+$light_hover: #8376ef;
+$dark_color: #7263ed;
+$secondary_color: #e3e3e3;
+$title_color: #C49E6A;
+$third_color: #F8EFDD;
+
+// Misc variables
+$shadow: 10px 12px 19px -12px rgba(0,0,0,0.75);
+
+// Font Variables
+$hind: 'Hind Siliguri', sans-serif;
+$khand: 'Khand', sans-serif;
+$font-big: 2.3em;
+
+@keyframes popUp {
+  from{
+    opacity: 0;
+    top: -500px;
+  } to {
+    opacity: 100%;
+    top: 0;
+  }
+}
+
+@keyframes rightIn {
+  from{
+    opacity: 0;
+    right: -500px;
+  } to {
+    right: -10px;
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeUp {
+  from{
+    opacity: 0;
+  } to {
+    display: block;
+    opacity: 100%;
+  }
+}
+
+@keyframes fade{
+  from{
+    top: 1000px;
+    height: 100px;
+    opacity: 0;
+  } to {
+    height: 100%;
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:48% 0%}
+    50%{background-position:53% 100%}
+    100%{background-position:48% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:48% 0%}
+    50%{background-position:53% 100%}
+    100%{background-position:48% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:48% 0%}
+    50%{background-position:53% 100%}
+    100%{background-position:48% 0%}
+}
+html{
+  overflow-x: hidden;
+  width: 100%;
+
+}
+body{
+  overflow: hidden;
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+  font-family: $hind;
+  background: linear-gradient(131deg, #d26ae5, #90b6fc);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 44s ease infinite;
+  -moz-animation: AnimationName 44s ease infinite;
+  animation: AnimationName 44s ease infinite;
+  .container{
+    position: relative;
+    .inner_container{
+      max-width: 1185px;
+    }
+  }
+  nav{
+    .hidden{
+      visibility: hidden;
+    }
+    .menu-overlay{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 1;
+      animation: fade 1s ease;
+      ul {
+        margin-top: 200px;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        li{
+          padding: 10px 0;
+          &:hover{
+            background: rgba(160,150,243,0.9);
+          }
+        }
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 3.3em;
+        }
+      }
+      .reveal{
+        visibility: visible;
+      }
+    }
+  } //nav end
+
+  .hamburger {
+    position: fixed;
+    z-index: 2;
+    outline: 0;
+    .hamburger-inner{
+      background-color: white;
+      &::before{
+        background-color: white;
+      }
+      &::after{
+        background-color: white;
+      }
+    }
+  }
+  //hamburger end
+
+  // Home section
+  #home{
+    top: 0;
+    background: url('../../images/hero.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 750px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $khand;
+    .firstName {
+      top: 500px;
+      font-size: $font-big;
+      color: white;
+      position: relative;
+      display: inline-block;
+      animation: popUp 1.5s 1s forwards;
+    }
+    .lastName {
+      right: -700px;
+      font-size: $font-big;
+      color: white;
+      position: relative;
+      display: inline-block;
+      animation: rightIn 1.5s 1s forwards;
+    }
+    .subString {
+      color: white;
+      font-size: 2.8em;
+      text-align: center;
+      opacity: 0%;
+      animation: fadeUp 1s 1.5s backwards;
+    }
+  }
+  // About section
+  #about{
+    height: 100%;
+  }
+    .blocks{
+      display: -ms-flex;
+      display: -webkit-flex;
+      display: flex;
+      flex-flow: row wrap;
+
+    #left-col{
+      min-width: 0;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1 50%;
+      background-color: $secondary_color;
+      @media (max-width: 768px){
+        flex: 1 100%;
+        height: 50;
+      }
+      @media (min-width: 320px) and (max-width: 767px){
+        height: 66.3%;
+      }
+    }
+    #right-col {
+      background: url("../../images/edwardduro.png") center no-repeat;
+      background-size: cover;
+      height: 750px;
+      min-width: 0;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1 50%;
+      @media (min-width: 320px) and (max-width: 767px){
+        flex: 1 100%;
+        height: 350px;
+      }
+    }
+    h1 {
+      font-size: 2.3em;
+      padding-top: 0;
+      padding-left: 60px;
+      font-family: $khand;
+      @media (max-width: 768px){
+        margin-top: -100px;
+        font-size: 2em !important;
+      }
+    }
+    h3 {
+      font-size: 1.8em;
+      padding-left: 60px;
+      font-family: $khand;
+       @media (max-width: 768px){
+        font-size: 1.3em !important;
+      }
+    }
+    .verticalText{
+      display: block;
+      position: fixed;
+      margin-top: 50px;
+      margin-left: 10px;
+      transform: rotate(90deg);
+      @media (max-width: 768px){
+        margin-left: 0;
+        float: right;
+        display: block;
+        position: relative;
+        transform: rotate(0);
+      }
+    }
+
+    #twitterHandle {
+      @media (max-width: 768px){
+        top: -75px;
+        margin-left: 60px;
+        // margin-right: 100px;
+        float: left;
+        display: block;
+        position: relative;
+        transform: rotate(0);
+      }
+      @media (max-width: 425px) {
+        margin-left: 0px;
+        margin-right: 0px;
+        display: block;
+        position: fixed;
+        float: left;
+      }
+    }
+    #emailText{
+      margin-top: 85px;
+      @media (max-width: 768px){
+        top: 0px;
+        margin-left: -115px;
+        float: left;
+        margin-top: 0;
+        display: block;
+        position: relative;
+        transform: rotate(0);
+      }
+      @media (max-width: 425px) {
+        display: none;
+      }
+    }
+    .intro {
+      padding-left: 60px;
+      margin-top: 100px;
+      font-size: 3.4em;
+      font-family: $khand;
+      color: $dark_color;
+      @media (max-width: 768px){
+        margin-top: 15px;
+      }
+    }
+    .aboutText{
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+/*******
+FORM
+********/
+form {
+    display: table;
+    margin: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    label {
+      position: relative;
+      display: block;
+
+      input {
+        font: 18px Helvetica, Arial, sans-serif;
+        box-sizing: border-box;
+        display: block;
+        border: none;
+        padding: 20px;
+        width: 300px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        outline: none;
+        transition: all 0.2s ease-in-out;
+
+        &::-webkit-input-placeholder {
+          transition: all 0.2s ease-in-out;
+          color: $secondary_color;
+          font: 18px;
+        }
+
+        &:focus, &.populated {
+          padding-top: 28px;
+          padding-bottom: 12px;
+
+          &::-webkit-input-placeholder {
+            color: transparent;
+          }
+
+          & + span {
+            opacity: 1;
+            top: 10px;
+          }
+        }
+      }
+    span {
+      color: $light_color;
+      font: 13px Helvetica, Arial, sans-serif;
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  button {
+    border: 0;
+    background-color: $light_color;
+    width: 100px;
+    display: inline;
+    margin-top: 10px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    height: 61px;
+    &:hover{
+      background-color: $light-hover;
+    }
+    &:focus{
+      outline: 0;
+      border: 0;
+    }
+    &:active {
+      border: 0;
+    }
+  }
+}
+
+
+#isotope .teaser {
+    background-color: transparent !important;
+}
+.width_33 {
+    width: 365px;
+}
+.item {
+    float: left;
+    margin: 0px 15px 30px 15px;
+}
+.teaser {
+    height: 530px;
+    background-color: #fff;
+}
+
+
+.image_container {
+    position: relative;
+    line-height: 0;
+}
+
+.image_overflow {
+    overflow: hidden;
+}
+
+.teaser .ce_image .image_container .image_container_wrapper {
+    position: relative;
+    padding: 40px;
+    height: 210px;
+    line-height: 28px;
+    background-color: white;
+}
+.caption {
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #6a6a6a;
+}
