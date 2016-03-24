@@ -335,7 +335,7 @@ Work
       height: 300px;
       &:hover {
         -webkit-transform: scale3d(1.2, 1.2, 1);
-          transform: scale3d(1.2, 1.2, 1);
+        transform: scale3d(1.2, 1.2, 1);
       }
     }
     *, *::before, *::after{
@@ -431,9 +431,13 @@ Contact
   h1{
     font-size: 6.3em;
     margin-top: 50px;
+    font-family: $khand;
     @media(max-width: 425px){
       font-size: 4em;
     }
+  }
+  h3 {
+    font-family: $khand;
   }
   .verticalLine {
     background-color: $secondary_color;
@@ -523,3 +527,21 @@ form {
     }
   }
 }
+.footIcon {
+  font-size: 3.3em;
+  color: white;
+  &:hover{
+    color: $secondary_color;
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
+  }
+  *, *::before, *::after{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+
+
