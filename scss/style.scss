@@ -113,6 +113,9 @@ body{
         padding: 0;
         list-style: none;
         text-align: center;
+        @media (max-width: 425px){
+          margin-top: 50px;
+        }
         li{
           padding: 10px 0;
           &:hover{
