@@ -311,27 +311,39 @@ body{
 /***********
 Work
 ************/
-#isotope .teaser {
-    background-color: transparent !important;
-}
+
 .width_33 {
     width: 365px;
 }
 .item {
     float: left;
     margin: 15px 1px 30px 10px;
+    @media(max-width: 425px){
+      margin-left: auto;
+      margin-right: auto;
+    }
 }
 .teaser {
   background-color: #fff;
 }
 
-
 .image_container {
+
     position: relative;
     line-height: 0;
     img{
       height: 300px;
+      &:hover {
+        -webkit-transform: scale3d(1.2, 1.2, 1);
+          transform: scale3d(1.2, 1.2, 1);
+      }
     }
+    *, *::before, *::after{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 .image_overflow {
@@ -352,14 +364,97 @@ Work
     color: #6a6a6a;
 }
 
+/*************
+Skills
+*************/
+#skills {
+  background-color: $secondary_color;
+  height: 650px;
+  @media (max-width: 800px){
+    height: 100%;
+  }
+
+  .intro {
+    padding-left: 60px;
+    margin-top: 100px;
+    font-size: 3.4em;
+    font-family: $khand;
+    color: $dark_color;
+    @media (max-width: 768px){
+      margin-top: 15px;
+    }
+  }
+  .skillText{
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+  }
+  i{
+    font-size: 6.3em;
+    @media (max-width: 768px){
+      font-size: 3em;
+    }
+  }
+  .verticalLine {
+    background-color: black;
+    display: block;
+    position: absolute;
+    width: 1px;
+    margin: 20px auto;
+    height: 600px;
+    opacity: .3;
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+  #iconColumn{
+    margin-top: 100px;
+    @media(max-width: 425px){
+      margin-left: 20px;
+      margin-bottom: 100px;
+    }
+  }
+  // .card {
+  //   background-color: white;
+  //   height: 100%;
+  //   padding-top: 10px;
+  //   margin-left: 20px;
+  //   margin-right: 20px;
+  //   margin-top: 130px;
+  // }
+
+}
 /*******
-FORM
+Contact
 ********/
+#contact{
+  h1{
+    font-size: 6.3em;
+    margin-top: 50px;
+    @media(max-width: 425px){
+      font-size: 4em;
+    }
+  }
+  .verticalLine {
+    background-color: $secondary_color;
+    display: block;
+    width: 1px;
+    margin: 20px auto;
+    height: 30px;
+    opacity: .3;
+  }
+}
 form {
     display: table;
     margin: 80px;
     margin-left: auto;
     margin-right: auto;
+    span{
+      .form-control {
+        border: white;
+        border-radius: 0px;
+      }
+    }
     label {
       position: relative;
       display: block;
@@ -395,6 +490,7 @@ form {
             top: 10px;
           }
         }
+
       }
     span {
       color: $light_color;
@@ -406,10 +502,10 @@ form {
       transition: all 0.2s ease-in-out;
     }
   }
-  button {
+  .btn {
     border: 0;
-    background-color: $light_color;
-    width: 100px;
+    background-color: $dark_color;
+    width: 100%;
     display: inline;
     margin-top: 10px;
     padding-bottom: 8px;
