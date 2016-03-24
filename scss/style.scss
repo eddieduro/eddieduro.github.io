@@ -305,6 +305,49 @@ body{
     }
   }
 }
+/***********
+Work
+************/
+#isotope .teaser {
+    background-color: transparent !important;
+}
+.width_33 {
+    width: 365px;
+}
+.item {
+    float: left;
+    margin: 15px 1px 30px 10px;
+}
+.teaser {
+  background-color: #fff;
+}
+
+
+.image_container {
+    position: relative;
+    line-height: 0;
+    img{
+      height: 300px;
+    }
+}
+
+.image_overflow {
+    overflow: hidden;
+}
+
+.teaser .thumb_image .image_container .image_container_wrapper {
+    position: relative;
+    padding: 40px;
+    height: 210px;
+    line-height: 28px;
+    background-color: white;
+}
+.caption {
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #6a6a6a;
+}
 
 /*******
 FORM
@@ -380,44 +423,4 @@ form {
       border: 0;
     }
   }
-}
-
-
-#isotope .teaser {
-    background-color: transparent !important;
-}
-.width_33 {
-    width: 365px;
-}
-.item {
-    float: left;
-    margin: 0px 15px 30px 15px;
-}
-.teaser {
-    height: 530px;
-    background-color: #fff;
-}
-
-
-.image_container {
-    position: relative;
-    line-height: 0;
-}
-
-.image_overflow {
-    overflow: hidden;
-}
-
-.teaser .ce_image .image_container .image_container_wrapper {
-    position: relative;
-    padding: 40px;
-    height: 210px;
-    line-height: 28px;
-    background-color: white;
-}
-.caption {
-    font-size: 20px;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: #6a6a6a;
 }
